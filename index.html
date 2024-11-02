@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Mortage calculator</title>
+
+    </head>
+
+
+    <body>
+
+        <div class="container">
+
+            <div class="first-half">
+                <div class="title">
+                    <h1>Mortage Calculator</h1>
+                    <button  id="clearBtn"> Clear-All</button>
+                </div>
+
+
+                <form id="form">
+                    <div class="inputs1">
+                        <label class="labelText" >
+                            Mortage Amount
+                        </label>
+                        <div class="align" id="amount">
+                            <p class="symbole">£</p>
+                            <input type="number" name="mortage-amount" id="mortage-amount" required>
+
+                        </div>
+                        <p class="empty" id="Amount-empty"> This field is rquired </p>
+                    </div>
+
+                    <div class="inputs1">
+                        <div class="next">
+                            <div class="inputs1">
+                                <label class="labelText">
+                                    Mortage Term
+                                </label>
+                                <div class="align" id="term">
+                                    <input type="number" name="mortage-term" id="mortage-term" required>
+                                    <p class="symbole">years</p>
+                                   
+
+                                </div>
+                                <p class="empty" id="term-empty"> This field is rquired </p>
+                            </div>
+
+                            <div class="inputs1">
+                                <label class="labelText">
+                                    Interest Rate
+                                </label>
+                                <div class="align" id="InterestRrate">
+                                    <input type="number" name="Interest-rate" id="Interest-rate" step="0.01" required>
+                                    <p class="symbole">%</p>
+
+                                </div>
+                                <p class="empty" id="rate-empty"> This field is rquired </p>
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                    <div class="inputs1">
+                    
+                               <label class="labelText"> Mortage Type</label>
+                            <div class="radio-inputs">
+                               <input class="mortage-type" id="repayment" name="mortage-type" type="radio" required>
+                               <label >Repayment</label>
+                            </div>
+                            <div class="radio-inputs">
+                                <input type="radio" id="interest-only" name="interest-only " class="mortage-type" required>
+                                <label >Interest Only</label>
+                            </div>
+                            <p class="empty" id="type-empty"> This fiel is rquired</p>
+
+                          </div>
+
+
+                          <div class="inputs1">
+                            <button class="calculateBtn" type="button" id="calculateBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>
+                                Calculate Repayments </button>
+
+                          </div>
+                </form>
+
+                
+                    
+            </div>
+            <div class="second-half">
+                <div class="firstView" id="first-view">
+                    <img src="illustration-empty.svg" alt="calculator">
+                    <h2>Results shown here</h2>
+                    <p class="labelText">  Complete the form and click “calculate repayments” to see what 
+                        your monthly repayments would be.</p>
+                </div>
+
+                <div class="resultsView" id="resultsView">
+                    <H2>Your results</H2>
+                    <P class="labelText">
+                        Your results are shown below based on the information you provided. 
+                        To adjust the results, edit the form and click “calculate repayments” again.
+                    </P>
+
+                    <div class="calculations">
+                        <div class="monthly">
+                            <p class="labelText"> Your monthly repayments</p>
+                            <span class="monthlyResult" id="monthlyResult"></span>
+                        </div>
+
+                        <div class="line"></div>
+                        <div class="total">
+                            <p class="labelText">Total you'll repay over the term </p>
+                            <span class="totalpayment" id="totalpayment"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="main.js" > </script>
+       
+    </body>
+</html>
